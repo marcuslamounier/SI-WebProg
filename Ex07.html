@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<script type="text/javascript">
+    function clkEntrar() {
+        var nome = document.getElementById("nome").value;
+        var senha = document.getElementById("senha").value;
+
+        var sitNome = document.getElementById("sitNome");
+        var sitSenha = document.getElementById("sitSenha");
+
+        if (nome === "") {
+            sitNome.innerHTML = "Nome não informado. Digite o nome para ter acesso.";
+        }
+        else {
+            sitNome.innerHTML = "";
+        }
+
+        if (senha === "") {
+            sitSenha.innerHTML = "Senha não informada. Digite a senha para ter acesso.";
+        }
+        else {
+            sitSenha.innerHTML = "";
+        }
+
+        if (nome === "") {
+            sitNome.innerHTML = "Nome não informado. Digite o nome para ter acesso.";
+        }
+        else {
+            sitNome.innerHTML = "";
+        }
+
+        if ((nome != "") && (senha != "")) {
+            if (senha != "123") {
+                sitSenha.innerHTML = "Senha inválida. A senha deve ser 123";
+            }
+            else {
+                document.getElementById("campos").innerHTML += ("<br/>Acesso autorizado");
+            }
+        }
+    }
+</script>
+
+<body>
+
+    
+
+
+    <form action="/action_page.php" method="POST">
+
+        <fieldset id="campos">
+            <legend>Informe os dados de login</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label id="sitNome"></label><br />
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" maxlength="12" required>
+            <label id="sitSenha"></label><br />
+
+            <input type="button" value="Entrar" onclick="clkEntrar()">
+        </fieldset>
+    </form>
+
+</body>
+</html>

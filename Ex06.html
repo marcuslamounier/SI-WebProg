@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <h3>Preencha o formulário abaixo</h3>
+    <form action="/action_page.php" method="POST">
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required maxlength="40">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" maxlength="40"><br>
+            <label>Nascimento:</label>
+            <input type="number" id="diaNascimento" name="diaNascimento" placeholder="dd" required min="1" max="31">
+            <input type="number" id="mesNascimento" name="mesNascimento" placeholder="mm" required min="1" max="12">
+            <input type="number" id="anoNascimento" name="anoNascimento" placeholder="yyyy" required min="1850"
+                max="2017"><br>
+            <label for="rg">RG:</label>
+            <input type="text" id="rg" name="rg"><br />
+            <label>CPF:</label>
+            <input type="number" id="campoCpf" name="campoCpf"> -
+            <input type="number" id="digCpf" name="digCpf">
+        </fieldset>
+        <fieldset>
+            <legend>Dados do Endereço:</legend>
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua">
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero"><br>
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro"><br />
+            <label for="estado">Estado:</label>
+            <select name="estado" id="estado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AM">Amazonas</option>
+                <option value="AP">Amapá</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SE">Sergipe</option>
+                <option value="SP">São Paulo</option>
+                <option value="TO">Tocantins</option>
+            </select><br />
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade"><br />
+            <label>CEP:</label>
+            <input type="number" id="campoCep" name="campoCep" pattern="{5}"> -
+            <input type="number" id="digCep" name="digCep" pattern="{3}">
+        </fieldset>
+        <fieldset>
+            <legend>Dados de login:</legend>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="fotoPerfil">Imagem de perfil:</label>
+            <input type="file" id="fotoPerfil" name="fotoPerfil"><br>
+            <label for="login">Login de usuário:</label>
+            <input type="text" id="login" name="login"><br />
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" maxlength="12" required><br />
+            <label for="confirmaSenha">Confirme a senha:</label>
+            <input type="password" id="confirmaSenha" name="confirmaSenha"><br />
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <button>Limpar</button>
+    </form>
+</body>
+
+</html>
